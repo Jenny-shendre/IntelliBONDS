@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Drawer, List, ListItemButton, ListItemIcon, ListItemText, Divider, Typography, IconButton, Tooltip } from "@mui/material";
 import { Menu, ArrowBackIos, PersonOutline, InsertChart, BubbleChart, ShowChart, PieChart, ShortText, BarChart, Tv, Settings, Language, Public, TrendingUp, Transform, ChatBubble } from "@mui/icons-material";
-import "../component/Sidebar.css";
+import "../component/sidebar.css";
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
