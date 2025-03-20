@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "../component/Header";
+import Sidebar from "../component/sidebar";
 import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
