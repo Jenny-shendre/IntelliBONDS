@@ -4,7 +4,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { useNavigate } from "react-router-dom";
 import { clearAuth } from "../utils/auth";
 import { ChromePicker } from "react-color";  // <- color picker
-import "./Header.css";
+import "../component/Header.css";
 import logo from "../assets/newlogo1.png";
 
 const Header = () => {
