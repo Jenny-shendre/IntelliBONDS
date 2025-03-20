@@ -1,0 +1,53 @@
+/* Header Container */
+.header {
+    background: #0f2d52 !important;
+    padding: 5px 20px !important;
+}
+
+/* Toolbar Styling */
+.header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.header-logo {
+    height: 40px;
+}
+
+/* Right Section Buttons */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.header-btn-setcolor {
+    background: #ffffff !important;
+    color: #000 !important;
+    text-transform: none !important;
+}
+
+.header-btn-theme {
+    color: #fff !important;
+    border-color: #fff !important;
+    text-transform: none !important;
+}
+
+/* Help Icon */
+.header-icon {
+    color: white !important;
+}
+
+/* Avatar Button */
+.header-avatar-btn {
+    color: inherit !important;
+}
+
+/* Avatar Styling */
+.header-avatar {
+    background-color: white !important;
+    color: #00264d !important;
+}
