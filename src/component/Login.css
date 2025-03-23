@@ -1,21 +1,30 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('https://your-image-url.com/background.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    display: flex; 
-    width: 100%;
-    
-  }
+/* login.css */
 
-.logo-intelliBONDS{
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    background-color: rgb(22, 22, 70);
-    color: white;
-    display: flex;
-    height: 10%;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.login-page {
+  background: url('https://your-image-url.com/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-intelliBONDS {
+  width: 100px;
+  background-color: #1c4c66;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  padding: 10px;
 }

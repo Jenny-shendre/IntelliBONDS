@@ -1,13 +1,31 @@
-
-  body {
-    font-family: Poppins !important;
-    font-weight: 400 !important;
-    line-height: 1.1 !important;
-    height: 100% !important;
+/* Theme Variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --appbar-color:#152f4e;;
+  --AppBar-background: #2cb0ca;
+  --AppBar-color: rgba(0, 0, 0, 0.87);
+  --panelColor1: #152f4e;
+  --panelColor2: #132742;
 }
 
+/* Apply Global Theme Styles */
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  height: 100% !important;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
 
+/* Code blocks */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* AppBar styling using CSS variable */
+.MuiAppBar-root {
+  background-color: var(--appbar-color) !important;
 }

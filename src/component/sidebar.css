@@ -1,8 +1,7 @@
 /* Sidebar Styling */
 .sidebar .MuiDrawer-paper {
-  background-color: #112D4E;
-  color: #fff;
   transition: width 0.3s ease-in-out;
+  /* background-color and color now controlled by MUI theme */
 }
 
 /* Collapsed Sidebar */
@@ -19,7 +18,7 @@
 
 /* Toggle Button */
 .toggle-button {
-  color: #fff !important;
+  color: inherit !important; /* inherit from theme */
 }
 
 /* Sidebar Title */
@@ -45,24 +44,24 @@
 }
 
 .menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1); /* can be overridden with theme if needed */
 }
 
 /* Menu Icon */
 .menu-icon {
   min-width: 40px !important;
-  color: #2cb0ca !important;
   transition: color 0.3s ease-in-out;
 }
 
 /* Change icon color on hover */
 .menu-item:hover .menu-icon {
-  color: #ffffff !important;
+  color: inherit !important; /* inherit from theme */
 }
 
 /* Divider */
 .divider {
-  background-color: #fff;
+  background-color: currentColor; /* uses text color from theme */
+  opacity: 0.2;
 }
 
 /* Hide Text when Collapsed */
