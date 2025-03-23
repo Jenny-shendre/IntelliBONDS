@@ -29,7 +29,8 @@ import {
   Transform,
   ChatBubble,
 } from "@mui/icons-material";
-import "../component/sidebar.css"; // We'll still use it but override important parts here
+import "../component/sidebar.css"; 
+
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
