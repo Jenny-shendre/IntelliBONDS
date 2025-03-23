@@ -66,7 +66,7 @@ const LoginPage = () => {
         flexDirection: "column",
       }}
     >
-      <AppBar position="fixed" sx={{ backgroundColor: "#00264d", width: "100%" }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "#1976d2", width: "100%" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <img
             src="https://dashboard.intellibonds.com/assets/Img/logos/newlogo1.png"
@@ -85,7 +85,7 @@ const LoginPage = () => {
           marginTop: "64px",
         }}
       >
-        <Paper
+        <Paper 
           elevation={3}
           sx={{
             padding: 4,

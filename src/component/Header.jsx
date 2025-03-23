@@ -1,18 +1,29 @@
-import React, { useState } from "react";
-import { AppBar, Toolbar, Button, IconButton, Avatar, Menu, MenuItem, Dialog } from "@mui/material";
+import React, { useState, useContext } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  IconButton,
+  Avatar,
+  Menu,
+  MenuItem,
+  Dialog
+} from "@mui/material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { useNavigate } from "react-router-dom";
 import { clearAuth } from "../utils/auth";
-import { ChromePicker } from "react-color";  // <- color picker
+import { ChromePicker } from "react-color";
 import "../component/Header.css";
 import logo from "../assets/newlogo1.png";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [colorPickerOpen, setColorPickerOpen] = useState(false);
   const [headerColor, setHeaderColor] = useState("#1976d2"); // default AppBar color
-
   const navigate = useNavigate();
+
+  const { toggleTheme, themeName, themeVars } = useContext(ThemeContext);
 
   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
@@ -50,8 +61,13 @@ const Header = () => {
             >
               Set Color
             </Button>
-            <Button variant="outlined" className="header-btn-theme">
-              Light theme
+            <Button
+              variant="outlined"
+              className="header-btn-theme"
+              onClick={toggleTheme}
+              style={{ color: themeVars.btnText, borderColor: themeVars.btnColor }}
+            >
+              {themeName === "light" ? "Dark Theme" : "Light Theme"}
             </Button>
             <IconButton className="header-icon">
               <HelpOutlineIcon />

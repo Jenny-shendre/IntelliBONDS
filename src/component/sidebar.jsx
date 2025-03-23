@@ -1,10 +1,39 @@
 import React, { useState } from "react";
-import { Drawer, List, ListItemButton, ListItemIcon, ListItemText, Divider, Typography, IconButton, Tooltip } from "@mui/material";
-import { Menu, ArrowBackIos, PersonOutline, InsertChart, BubbleChart, ShowChart, PieChart, ShortText, BarChart, Tv, Settings, Language, Public, TrendingUp, Transform, ChatBubble } from "@mui/icons-material";
-import "../component/Sidebar.css";
+import {
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+  Typography,
+  IconButton,
+  Tooltip,
+  useTheme,
+} from "@mui/material";
+import {
+  Menu,
+  ArrowBackIos,
+  PersonOutline,
+  InsertChart,
+  BubbleChart,
+  ShowChart,
+  PieChart,
+  ShortText,
+  BarChart,
+  Tv,
+  Settings,
+  Language,
+  Public,
+  TrendingUp,
+  Transform,
+  ChatBubble,
+} from "@mui/icons-material";
+import "../component/sidebar.css"; // We'll still use it but override important parts here
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const theme = useTheme(); // Access the current theme (light or dark)
 
   return (
     <Drawer
@@ -17,6 +46,8 @@ const Sidebar = () => {
           width: collapsed ? 80 : 240,
           boxSizing: 'border-box',
           transition: 'width 0.3s ease-in-out',
+          backgroundColor: theme.palette.background.default, // Dynamic based on theme
+          color: theme.palette.text.primary, // Text color based on theme
         },
       }}
     >
@@ -40,7 +71,9 @@ const Sidebar = () => {
         ].map((item, index) => (
           <Tooltip key={index} title={collapsed ? item.text : ""} placement="right">
             <ListItemButton className="menu-item">
-              <ListItemIcon className="menu-icon">{item.icon}</ListItemIcon>
+              <ListItemIcon sx={{ color: theme.palette.text.primary }}>
+                {item.icon}
+              </ListItemIcon>
               {!collapsed && <ListItemText primary={item.text} />}
             </ListItemButton>
           </Tooltip>
@@ -48,7 +81,7 @@ const Sidebar = () => {
       </List>
 
       <Divider className="divider" />
-      
+
       <List>
         <Typography variant="h6" className={`sidebar-title ${collapsed ? "hidden" : ""}`}>Portfolio Assist</Typography>
         {[
@@ -62,7 +95,9 @@ const Sidebar = () => {
         ].map((item, index) => (
           <Tooltip key={index} title={collapsed ? item.text : ""} placement="right">
             <ListItemButton className="menu-item">
-              <ListItemIcon className="menu-icon">{item.icon}</ListItemIcon>
+              <ListItemIcon sx={{ color: theme.palette.text.primary }}>
+                {item.icon}
+              </ListItemIcon>
               {!collapsed && <ListItemText primary={item.text} />}
             </ListItemButton>
           </Tooltip>
@@ -70,12 +105,14 @@ const Sidebar = () => {
       </List>
 
       <Divider className="divider" />
-      
+
       <List>
         <Typography variant="h6" className={`sidebar-title ${collapsed ? "hidden" : ""}`}>Chat Assist</Typography>
         <Tooltip title={collapsed ? "Gen AI Chat" : ""} placement="right">
           <ListItemButton className="menu-item">
-            <ListItemIcon className="menu-icon"><ChatBubble /></ListItemIcon>
+            <ListItemIcon sx={{ color: theme.palette.text.primary }}>
+              <ChatBubble />
+            </ListItemIcon>
             {!collapsed && <ListItemText primary="Gen AI Chat" />}
           </ListItemButton>
         </Tooltip>

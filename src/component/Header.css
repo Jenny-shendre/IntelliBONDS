@@ -1,6 +1,6 @@
 /* Header Container */
 .header {
-    background: #0f2d52 !important;
+    background: var(--primaryColor) !important;
     padding: 5px 20px !important;
 }
 
@@ -25,29 +25,29 @@
 
 /* Buttons */
 .header-btn-setcolor {
-    background: #ffffff !important;
-    color: #000 !important;
+    background: var(--secondaryColor) !important;
+    color: var(--textOnSecondary) !important;
     text-transform: none !important;
 }
 
 .header-btn-theme {
-    color: #fff !important;
-    border-color: #fff !important;
+    color: var(--textOnPrimary) !important;
+    border-color: var(--textOnPrimary) !important;
     text-transform: none !important;
 }
 
 /* Help Icon */
 .header-icon {
-    color: white !important;
+    color: var(--textOnPrimary) !important;
 }
 
 /* Avatar Button */
 .header-avatar-btn {
-    color: inherit !important;
+    color: var(--textOnPrimary) !important;
 }
 
 /* Avatar Styling */
 .header-avatar {
-    background-color: white !important;
-    color: #00264d !important;
+    background-color: var(--secondaryColor) !important;
+    color: var(--textOnSecondary) !important;
 }
