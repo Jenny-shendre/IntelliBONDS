@@ -1,3 +1,63 @@
+/* Sidebar Container */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Adjust this according to header height */
+  left: 0;
+  height: calc(100% - 60px); /* Full height minus header */
+  z-index: 999; /* Ensure it stays above the main content */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Sidebar Paper */
+.sidebar .MuiDrawer-paper {
+  position: relative;
+  height: 100%;
+  width: 250px; /* Adjust as needed */
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed .MuiDrawer-paper {
+  width: 80px !important;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar-title.hidden {
+  display: none;
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+}
+
+.sidebar.collapsed .menu-item .MuiListItemText-root {
+  display: none;
+}
+
+.sidebar.collapsed .MuiListItemIcon-root {
+  min-width: 0;
+}
+
+
+/* Content Shift */
+.main-content {
+  margin-left: 250px; /* Same as sidebar width */
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 80px; /* Adjusted for collapsed width */
+}
+
 /* Sidebar Styling */
 .sidebar .MuiDrawer-paper {
   transition: width 0.3s ease-in-out;

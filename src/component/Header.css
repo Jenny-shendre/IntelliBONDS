@@ -2,8 +2,15 @@
 .header {
     background: var(--primaryColor) !important;
     padding: 5px 20px !important;
+    float: left;
+    position: fixed; /* Fixes the header at the top */
+    top: 0;
+    width: 100%; /* Makes the header span across the full width */
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
-
+body {
+    padding-top: 60px; /* Adjust according to header height */
+}
 /* Toolbar Styling */
 .header-toolbar {
     display: flex;
