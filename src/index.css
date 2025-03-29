@@ -18,6 +18,25 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Sidebar Fix */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; /* Full viewport height */
+  z-index: 1000;
+}
+/* Header Fix */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1100; /* Higher than sidebar */
 }
 
 /* Code blocks */
